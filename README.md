@@ -20,7 +20,7 @@ I developed FieldOps to solve the complexity of managing on-field operations and
 * **Client Transparency:** Clients can view the progress of their specific tasks and have the authority to cancel if needed.
 * **Professional Reporting:** Dedicated views for pending, active, and completed milestones to keep operations organized.
 
-## Setup Instructions
+## Live Demo
 Experience the application live: [field-ops-flame.vercel.app](field-ops-flame.vercel.app)
 
 ## Setup Instructions
