@@ -21,15 +21,21 @@ import PendingTasks from "./pages/dashboard/worker/PendingTasks.jsx";
 import InProgressTasks from "./pages/dashboard/worker/InProgressTasks.jsx";
 import CompletedTasks from "./pages/dashboard/worker/CompletedTasks.jsx";
 import CancelledTasks from "./pages/dashboard/worker/CancelledTasks.jsx";
+import { PrivateRoutes } from "./routes/PrivateRoutes.jsx";
+import { AuthRoutes } from "./routes/AuthRoutes.jsx";
 
 function App() {
 
   return (
     <>
     <Routes>
+      <Route element={<AuthRoutes />}>
       <Route index element={<Signup />} />
       <Route path="/login" element={<Login />} />
+      </Route>
+      
 
+      <Route element={<PrivateRoutes />}>
 <Route element={<DashboardLayout />}>
       <Route path="/all-jobs" element={<AllJobs />} />
       <Route path="/create-job" element={<CreateJob />} />
@@ -53,6 +59,7 @@ function App() {
       <Route path="/worker/jobs/cancelled" element={<CancelledTasks />} />
 
       <Route path="/add-note/:id" element={<AddNote />} />
+</Route>
 </Route>
 
     </Routes>

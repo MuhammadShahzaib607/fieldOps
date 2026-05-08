@@ -15,9 +15,21 @@ const Login = () => {
     setLoading(true);
     try {
       const res = await axios.post(`${API_URL}/auth/login`, { email, password });
-      localStorage.setItem('token', res.data.data.token);
-      localStorage.setItem('role', res.data.data.role); 
-      navigate('/all-jobs');
+      
+      const { token, role } = res.data.data;
+      localStorage.setItem('token', token);
+      localStorage.setItem('role', role); 
+
+      if (role === 'admin') {
+        navigate('/all-jobs');
+      } else if (role === 'worker') {
+        navigate('/my-tasks');
+      } else if (role === 'client') {
+        navigate('/all-orders');
+      } else {
+        navigate('/');
+      }
+
     } catch (err) {
       alert(err.response?.data?.message || "Login failed.");
     } finally {
