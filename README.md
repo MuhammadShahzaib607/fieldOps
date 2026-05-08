@@ -21,7 +21,7 @@ I developed FieldOps to solve the complexity of managing on-field operations and
 * **Professional Reporting:** Dedicated views for pending, active, and completed milestones to keep operations organized.
 
 ## Live Demo
-Experience the application live: [field-ops-flame.vercel.app](field-ops-flame.vercel.app)
+Experience the application live: [https://field-ops-flame.vercel.app](https://field-ops-flame.vercel.app/)
 
 ## Setup Instructions
 
